@@ -1,0 +1,368 @@
+/* reglas
+selecctores
+declaraciones
+propiedades
+valores */
+
+/* selector de etiqueta hace referencia al tag, ej: header, section, article, nav 
+header{
+    background: gray;
+    coloe: red
+}
+*/
+
+/* Selector descendente, ej:
+body header div nav ol li a {} */
+
+
+/* Selector de clase se una con el '.', ej:
+.linkTo
+*/
+
+
+/* Selector de ID se usa con el '#', ej:
+#portafolio */
+
+
+/* gris oscuro = #1d252c
+gris claro = #626262
+background gris = #1b2127 
+celeste = #026fff*/
+
+
+/* 
+background-color para agregar un color de fondo
+color para agregar un color al texto
+text-decoration para modificar la decoración del texto, como el subrayado del texto
+background-image para agregar una imagen de fondo
+background-size para modificar el tamaño del background asignado
+background-repeat para modificar la repetición del backgound asignado, configura como se repite la imagen
+background-position para modificar la posición del bakground asignado */
+
+
+
+/* El espacio entre elementos se llama margen */
+
+
+
+/* los display nos ayudan a poner objetos uno al lado del otro */
+/* tipos de display: 
+en block ocupa todo el ancho posible sin importarle el ancho del contenedor y en linea: ocupa todo el ancho que tenga el contenido el contenedor */
+
+
+
+
+/* el 'display flex' tambien ayuda a poner objetos uno al lado del otro,
+pero este se le debe aplicar a las etiquetas padres.
+
+con el 'flex-wrap: wrap' se mantienen a todos los elementos dentro del margin sin que estos se salgan de la pantalla 
+
+ - si se requiere que el 'display flex' se doble en columna se usa 'display-direction: column ò row'
+
+ - 'IMPORTANTE: AL USAR display-direction: column ò row,  SE INVERTIRAN LOS EJES X(justify-content) y Y(aling-items) 
+ 
+ - si se quiere evitar que a los elementos se les modifique el tamaño cuando no quepan dentro del margen,
+ se debe aplicar la propiedad 'flex-shrink: 0 para que no se modifique y 1 para que se modifique'
+*/
+
+
+/*
+Alineando elementos de forma horizontal
+para alinear elementos sobre el eje x se utiliza la propiedad 'justify-content', esta se usa asi:
+
+- 'justify-content: flex.start', alinea elementos al inicio(izq).
+- 'justify-content: flex.end', alinea elemntos al final(der).
+- 'justify-content: flex.conter', alinea al centro.
+- 'justify-content: space-between', genera un espaciado entre los elementos, pero no lo hace en los borde de los margenes.
+- 'justify-content: space-evenly', genera un espaciado igual con todos los elemtos, incluyendo los bordes de los margenes.
+- 'justify-content: space-around', se suman los margenes al estar los elemtos uno al lado de otro (margin-collapsing) */
+
+
+/* Alineando elementos de forma vertical
+
+para alinear elementos sobre el eje y se utiliza la propiedad 'aling-items', esta se usa asi:
+
+'aling-items: flex-start', alinea los elementos en la parte de arriba.
+'aling-items: flex-end', alinea los elementos en la parte de abajo.
+'aling-items: center', centra los elementos en la mitad, muy importante combinar esta propiedad con la alineacion horizontal. */
+
+/* se utiliza el 'aling-self' para alinear elementos por separado de los elementos padres */
+
+/* la propiedad 'object-fit: cover;' redimenciona las imagenes para que se vean relatibamnete bien */
+
+/* la propiedad 'overflow: hidden;' oculta un elemento que se desborde de su elemento padre, esta se suele combinar con flex-shrink: 0; para que los elemtos conserben las dimenciones*/
+
+/* la propiedad 'position: relative;' sobrepone un elemtento encima de otro (trae al frente) */
+
+
+body{
+    font-family: 'Roboto Mono', sans-serif;
+    margin: 0px;
+}
+
+figure{
+    margin: 0px;
+}
+
+ol{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    
+}
+
+.header ol li {
+    height: inherit;
+}
+
+.header ol{
+    display: flex;
+    height: inherit;
+}
+
+/* la coma despues del selector asigna el mismo estilo a diferentes selectores  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: normal;
+    /* font-style: italic; */
+}
+
+h1{
+    margin: 0px;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -2px;
+    color: white;
+    /* margin: top right bottom left; recibe 4 valores */
+    /* margin: (top-bottom)  (right-left) tambien puede recibir solo dos valores; */
+    margin: 100px 150px 70px 30px;
+    /* text-transform: uppercase;
+    text-decoration: dashed; */
+}
+
+h1 strong {
+    color: #026fff;
+}
+
+h2{
+    color: #026fff;
+    text-transform:  uppercase;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.portfolio{
+    background: #fafafa;
+    padding: 20px;
+}
+.project{
+    /* border-top: tamaño tipo estilo; */
+    /* border-top: 10px solid red;
+    border-right: 10px solid green;
+    border-left: 10px solid yellow;
+    border-bottom: 10px solid blue; */
+    border:  1px solid gray;
+    border-radius: 10px; /* asi se le pone curva a las esquinas en general*/
+    /*border-top-left-radius: 70px;  asi se le pone curva a las esquinas por separado*/
+    margin-bottom: 15px;
+    padding: 20px;
+    /* margin: 20px; */
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.project.course, project-date, project-url{
+    margin: 10px 0px ;
+}
+
+.project-description{
+    font-size: 20px;
+}
+
+.project-title{
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px ;
+}
+.project-details {
+    width: 500px;
+}
+
+.project-imageContainer {
+    width: 500px;
+}
+.hero{
+    /* asi se ubican las imagenes en las paginas MUY IMPORTANTE */
+    height: 300px;
+    /* background-image: url('../banner-aviones.png');  */
+    /* background-size: 500px 300px; */
+    /* background-repeat: no-repeat;
+    background-position-x: right; */
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image{
+    object-fit: cover;
+}
+.menu{
+    height: inherit;
+}
+
+.header{
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.footer{
+    background-color: #1b2127;
+    color: white;
+    display:  flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.event{
+    margin: 10px;
+    width: 480px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f4fbff;
+}
+
+.event-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event img{
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.event-detail{
+    margin: 20px 40px;
+    background-color: white;
+    margin-top: -50px;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-description{
+    text-align: left;
+}
+
+.event-url{
+    border: 1px solid;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #026fff;
+    border-radius: 5px;
+}
+
+.event-list-title{
+    margin: 20px;
+}
+
+.contact{
+    background-color:#026fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.social-link{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    background-size: 50px 50px;
+    margin: 0 10px;
+}
+
+.social-link.twitter{
+    background-image: url('../assets/check-green-icon.svg');
+}
+.social-link.facebook{
+    background-image: url('../assets/check-grey.svg');
+}
+.social-link.github{
+    background-image: url('../assets/check-icon-violet.svg');
+}
+.social-link.instagram{
+    background-image: url('../assets/check-state.svg');
+}
+
+.form-email input{
+    border-color: gray;
+    padding: 10px 20px 10px 25px;
+    background-image: url('../banner-aviones.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 15px 15px;
+    background-position-x: 5px;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.form-email button{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    color: white;
+    padding: 10px 0px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.form-email h3 {
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.container{
+    /* border: 1px solid red; */
+    width: 1300px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}

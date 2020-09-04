@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nicolas Aguirre Yacup</title>
+        <meta charset="UTF-8" >
+        <!--link se coloca el 'favicon' este es la imagen que muetra la pestaña-->
+        <!--rel(tipo de relacion 'icono', type(tipo de archivo), href(ruta de la imagen))-->
+        <link rel='icon' type='image/png' href='cropped-favicon.png'>
+        <!--existen tres formas de poner estilos en html-->
+        <!-- 1. estilos en linea(se colocan como atributos dentro de las etiquetas ) y tienen mayor jerarquia que los de tag-->
+        <!--2.estilos con el tag 'style' (se una la etiqueta style en donde se quiera pero preferiblemente en el head) -->
+        <!--3.estilos externos o con enlace  -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+
+        <link rel="stylesheet" href="estilos/style.css">
+        
+        <!--esto de arriba es un selector de etiqueta-->
+
+
+    </head>
+    <body>
+        <!-- La etiqueta (ETQ) header se utiliza para hacer la cabecera de las paginas  -->
+        <header class="header" >
+        <!--<header style="color: white; background-color: black;" >-->
+            <div class="container">
+                <figure class="logo">
+                    <!--Las rutas de las imagenes pueden ser absolutas(ruta completa de la carpeta)-->
+                    <!--Las rutas tambien pueden ser relativas('../' ó 'la rutas de carpetas a parir de donde este el archivo')-->
+                    <img src='../logo.png' height="50px" alt='No cargar =('><!--el atributo alt pone texto alternativo cuendo las ilagenes no cargan-->
+                </figure>
+                <nav class="menu">
+                    <!--la etq crea un menu de navegacion-->
+                    <ol>
+                        <!-- la etq ol se refiere a listas ordenadas-->
+                        <li>
+                            <!-- la etq li se refiere a lista de item-->
+                            <a class="linkTo" href="portafolio/index2.html">
+                                <!--se utiliza '/' para inidicar que elenlace es entre carpetas de la pagina -->
+                                <!--se utiliza '#' para indicar que el enlace es interno de la pagina-->
+                                <!--la etq sirven para poner 'anchas' o tambien enlaces -->
+                               Portafolio
+                            </a>
+                        </li>
+                        <li>
+                            <a class="linkTo" href="#eventos">Experiencia</a>
+                        </li>
+                        <li>
+                            <a class="linkTo" href="#contacto">Trabajemos juntos</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </header>
+            <!-- La etq seccion separa por secciones las paginas  -->
+            <section class="hero"> 
+                <div class="container">
+                    <h1>
+                        <!-- las etq h1, h2 etc se ponen en orden jerarquico, tentiendo encuenta la pagina-->
+                        Hola! Soy <strong>Nicolas Aguirre Yacup</strong> <br> Desarrollador Javascript <strong>Full Stack</strong>
+                    </h1>
+                    <!-- a las imagenes pricipales se les suele conocer como heros-->
+                    <img class="hero-image" src="banner-aviones.png" width="500" height="300" alt='No cargo =('>
+                </div>
+            </section>
+
+            <section id="portafolio" class="portfolio">
+                <div class="container">
+                    <h2> Portafolio (Proyectos Destacados)</h2>
+                    <article class="project">
+                        <!--la etq article hace referencia a cada uno de los proyectos-->
+                        <div class="project-details">
+                            <h3 class="project-title">Platzi Video</h3>
+                            <h6 class="project-course">React Native / React</h6>
+                            <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p><!--la etq small formatea parrafos pequeños-->
+                            <p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
+                            <p class="project-description">MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1 MUCHO TEXTO1</p>
+                            
+                       </div>
+                        <figure class="project-imageContainer">
+                        <img class="project-image" src="banner-aviones.png" alt="No cargo =(">
+                        </figure>
+                    </article>
+                    <article class="project">
+                        <!--la etq article hace referencia a cada uno de los proyectos-->
+                        <div class="project-details">
+                            <h3 class="project-title">Platzi Video 2</h3>
+                            <h6 class="project-course">React Native 2 / React 2</h6>
+                            <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p><!--la etq small formatea parrafos pequeños-->
+                            <p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
+                            <p class="project-description">MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2 MUCHO TEXTO2</p>
+                            
+                       </div>
+                        <figure class="project-imageContainer">
+                        <img class="project-image" src="banner-aviones.png" alt="No cargo =(">
+                        </figure>
+                    </article>
+                </div>
+            </section>
+
+            <div class="container">
+                <h2 class="event-list-title">Mas sobre mi Experiencia</h2>
+            </div>
+
+            <section id="eventos" class="event-list"> 
+
+                <div class="container">
+                    <article class="event">
+                        <figure class="event-imageContainer">
+                            <!--la etq figure sirve como contenedor para una imagen o algien que sea padre de una imagen-->
+                            <img class="event-image" src='banner-aviones.png'alt='No cargo =('> 
+                        </figure>
+                        <div class="event-detail">                        
+                            <h3 class="event-title">PlatziConf Mexico 2018</h3>
+                            <p class="event-description">PEROO MUUUCHOOO MAS TEXTOOO</p>
+                            <!--con el atributo 'target="_blank" se abre una pestaña nueva cuando se le de click al enlace-->
+                            <a class="event-url" href="https://www.youtube.com/watch?v=RjFoMpDtsk8" target="_blank">Ver Plática</a>
+                        </div>
+                    </article>
+                    <article class="event">
+                        <figure class="event-imageContainer">
+                            <!--la etq figure sirve como contenedor para una imagen o algien que sea padre de una imagen-->
+                            <img class="event-image" src='banner-aviones.png'alt='No cargo =('> 
+                        </figure>
+                        <div class="event-detail">                        
+                            <h3 class="event-title">PlatziConf Mexico 2018</h3>
+                            <p class="event-description">PEROO MUUUCHOOO MAS TEXTOOO</p>
+                            <!--con el atributo 'target="_blank" se abre una pestaña nueva cuando se le de click al enlace-->
+                            <a class="event-url" href="https://www.youtube.com/watch?v=RjFoMpDtsk8" target="_blank">Ver Plática</a>
+                        </div>
+                    </article>
+                    <article class="event">
+                        <figure class="event-imageContainer">
+                            <!--la etq figure sirve como contenedor para una imagen o algien que sea padre de una imagen-->
+                            <img class="event-image" src='banner-aviones.png'alt='No cargo =('> 
+                        </figure>
+                        <div class="event-detail">                        
+                            <h3 class="event-title">PlatziConf Mexico 2018</h3>
+                            <p class="event-description">PEROO MUUUCHOOO MAS TEXTOOO</p>
+                            <!--con el atributo 'target="_blank" se abre una pestaña nueva cuando se le de click al enlace-->
+                            <a class="event-url" href="https://www.youtube.com/watch?v=RjFoMpDtsk8" target="_blank">Ver Plática</a>
+                        </div>
+                    </article>
+                    <article class="event">
+                        <figure class="event-imageContainer">
+                            <!--la etq figure sirve como contenedor para una imagen o algien que sea padre de una imagen-->
+                            <img class="event-image" src='banner-aviones.png'alt='No cargo =('> 
+                        </figure>
+                        <div class="event-detail">                        
+                            <h3 class="event-title">PlatziConf Mexico 2018</h3>
+                            <p class="event-description">PEROO MUUUCHOOO MAS TEXTOOO</p>
+                            <!--con el atributo 'target="_blank" se abre una pestaña nueva cuando se le de click al enlace-->
+                            <a class="event-url" href="https://www.youtube.com/watch?v=RjFoMpDtsk8" target="_blank">Ver Plática</a>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+            <section id='contacto' class="contact"> 
+                <div class="container">
+                    <form action="/suscripcion/" class="form-email" >
+                        <h3>¿Creamos algo juntos?</h3>
+                        <!--<label for="email">Dejame tu email</label>-->
+                        <input type="text" placeholder="Déjame tu emal" id="email">
+                        <!--estas son dos formar de hacer botones-->
+                        <button>Enviar</button>
+                        <!-- <input type="submit" value="Enviar"> -->
+    
+                    </form>
+                    <div class="social">
+                        <a href="" class="social-link twitter"></a>
+                        <a href="" class="social-link facebook"></a>
+                        <a href="" class="social-link github"></a>
+                        <a href="" class="social-link instagram"></a>
+                    </div>
+                </div>
+            </section>
+            <!-- La etq footer es la parte inferior de las paginas -->
+            <footer class="footer">
+                <div class="container">
+                    <div>
+                        <p>Curso de diseño web hecho por nicolas aguirre yacup - 2020 <img src="banner-aviones.png" alt="img-footer" width="80px"> </p>
+                    </div>
+                    <div>
+                        <p>Desined with <\3 by Nico.A.Y</p>
+                    </div>
+                </div>
+            </footer>
+    </body>
+</html>
